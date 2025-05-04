@@ -1,0 +1,259 @@
+.home {
+  text-align: center;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-container {
+  width: 100vw;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.video-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #e3b778);
+  pointer-events: none;
+}
+
+.intro-video {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.video-overlay h1 {
+  font-size: 2.5rem;
+  margin: 0 0 20px;
+  color: white;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.video-overlay h1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-overlay .hero-text {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.video-overlay .hero-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-overlay .hero-text p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: white;
+}
+
+.content-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 40px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.description-section,
+.description-section-reversed {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  height: 500px;
+}
+
+.description-section {
+  /* Изображения слева, текст справа */
+}
+
+.description-section-reversed {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+
+.image-slider {
+  flex: 1;
+  max-width: 400px;
+  cursor: pointer;
+  position: relative;
+}
+
+.image-slider-reversed {
+  flex: 1;
+  max-width: 400px;
+  cursor: pointer;
+  position: relative;
+  order: 2;
+}
+
+.image-stack {
+  position: relative;
+  height: 500px;
+  overflow: visible;
+}
+
+.image-stack img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease, z-index 0s ease;
+  top: 20px;
+  left: -5px;
+}
+
+.image-stack img.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.image-stack img.inactive {
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.image-stack img:nth-child(2) {
+  top: 10px;
+  left: 5px;
+}
+
+.image-stack img:nth-child(3) {
+  top: 20px;
+  left: -5px;
+}
+
+.description-text {
+  flex: 2;
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+  color: #4a2c0b;
+  line-height: 1.7;
+  text-align: left;
+  position: relative;
+  z-index: 20;
+  margin-left: 60px;
+  padding-top: 20px;
+}
+
+.description-text-reversed {
+  flex: 2;
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+  color: #4a2c0b;
+  line-height: 1.7;
+  text-align: left;
+  position: relative;
+  z-index: 20;
+  margin-right: 60px;
+  padding-top: 20px;
+}
+
+.description-text p,
+.description-text-reversed p {
+  margin: 15px 0;
+}
+
+.description-text p:first-child,
+.description-text-reversed p:first-child {
+  margin-top: 0;
+}
+
+.description-text p:last-child,
+.description-text-reversed p:last-child {
+  margin-bottom: 0;
+}
+
+/* Контейнер для глобуса и заголовка */
+.globe-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Стили для 3D-заголовка */
+.three-d-heading {
+  font-size: 2rem; /* Уменьшаем размер шрифта, чтобы текст помещался в одну строку */
+  color: #4a2c0b;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  white-space: nowrap; /* Запрещаем перенос текста */
+  text-shadow: 
+    2px 2px 0 #e3b778,
+    4px 4px 0 #d2a65a,
+    6px 6px 0 #c1953b,
+    8px 8px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.three-d-heading:hover {
+  transform: translate(-50%, -50%) rotateX(10deg) rotateY(10deg);
+  text-shadow: 
+    3px 3px 0 #e3b778,
+    6px 6px 0 #d2a65a,
+    9px 9px 0 #c1953b,
+    12px 12px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Стили для глобуса */
+.globe-section > *:last-child {
+  z-index: 2;
+}

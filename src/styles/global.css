@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #e3b778; /* Оттенок охры */
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+}
+
+#root {
+  max-width: 100%; /* Убираем ограничение ширины для всего приложения */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
