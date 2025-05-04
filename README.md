@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Culturology
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Проект Culturology — это веб-приложение, которое представляет информацию о народах мира. Фронтенд построен на React, бэкенд — на Django с использованием Django REST Framework. Приложение позволяет просматривать список народов, фильтровать их по названию и открывать детальные страницы с описанием.
 
-## Available Scripts
+# Структура проекта
 
-In the project directory, you can run:
+Проект разделён на две части: фронтенд (frontend) и бэкенд (backend).
+# Фронтенд (frontend/)
+frontend/
+├── node_modules/         # Зависимости npm-пакетов
+├── public/               # Статические ресурсы
+│   ├── favicon.png       # Иконка приложения
+│   └── index.html        # Основной HTML-шаблон
+├── src/                  # Исходный код фронтенда
+│   ├── assets/           # Изображения и другие ресурсы
+│   │   ├── images/       # Изображения для карточек и детальных страниц
+│   ├── components/       # React-компоненты
+│   │   ├── Peoples/      # Компонент для списка народов
+│   │   └── PeopleDetail/ # Компонент для детальной страницы народа
+│   ├── App.css           # Стили для основного компонента
+│   ├── App.jsx           # Основной компонент приложения
+│   ├── index.css         # Глобальные стили
+│   └── index.jsx         # Точка входа React-приложения
+├── .env                  # Переменные окружения (например, URL API)
+├── package.json          # Метаданные проекта и зависимости
+└── README.md             # Документация проекта
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Бэкенд (backend/)
+backend/
+├── culturology/          # Основное Django-приложение
+│   ├── __init__.py
+│   ├── settings.py       # Настройки проекта
+│   ├── urls.py           # Маршруты проекта
+│   └── wsgi.py           # WSGI-конфигурация для продакшена
+├── peoples/              # Приложение для работы с народами
+│   ├── migrations/       # Миграции базы данных
+│   ├── __init__.py
+│   ├── admin.py          # Настройки админки
+│   ├── apps.py           # Конфигурация приложения
+│   ├── models.py         # Модели данных
+│   ├── serializers.py    # Сериализаторы для API
+│   ├── urls.py           # Маршруты приложения
+│   └── views.py          # Представления и API-эндпоинты
+├── staticfiles/          # Собранные статические файлы
+├── manage.py             # Утилита для управления Django
+├── requirements.txt      # Зависимости Python
+└── Procfile              # Конфигурация для Render
