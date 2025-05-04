@@ -8,16 +8,32 @@
 
 .peoples h1 {
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-family: 'Georgia', serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e3b778;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+  color: #4a2c0b;
 }
 
 .peoples-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  align-items: stretch;
+  /* Фиксируем минимальную высоту, чтобы грид не сжимался */
+  min-height: 520px; 
+  padding-bottom: 20px;
 }
 
 .people-card {
@@ -26,16 +42,17 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  height: 500px; 
 }
 
 .people-card:hover {
-  transform: scale(1.05); /* Лёгкое увеличение карточки при наведении */
+  transform: scale(1.05);
 }
 
 .people-image {
   width: 100%;
-  height: 500px; /* Увеличиваем высоту для прямоугольной формы */
-  object-fit: cover; /* Изображение заполняет карточку */
+  height: 500px; 
+  object-fit: cover; 
   display: block;
 }
 
@@ -45,16 +62,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* Скрыт по умолчанию */
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .people-card:hover .people-overlay {
-  opacity: 1; /* Появляется при наведении */
+  opacity: 1;
 }
 
 .people-name {
@@ -64,10 +81,10 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  transform: translateY(-20px); /* Смещение вверх для эффекта появления */
+  transform: translateY(-20px);
   transition: transform 0.3s ease;
 }
 
 .people-card:hover .people-name {
-  transform: translateY(0); /* Плавное появление названия */
+  transform: translateY(0);
 }

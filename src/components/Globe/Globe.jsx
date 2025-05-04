@@ -17,7 +17,7 @@ function GlobeModel() {
     <primitive
       ref={meshRef}
       object={scene}
-      scale={[5, 5, 5]} // Увеличиваем масштаб
+      scale={[5, 5, 5]} 
       position={[0, 0, 0]}
     />
   );

@@ -209,7 +209,6 @@
   margin-bottom: 0;
 }
 
-/* Контейнер для глобуса и заголовка */
 .globe-section {
   position: relative;
   width: 100%;
@@ -219,9 +218,8 @@
   align-items: center;
 }
 
-/* Стили для 3D-заголовка */
 .three-d-heading {
-  font-size: 2rem; /* Уменьшаем размер шрифта, чтобы текст помещался в одну строку */
+  font-size: 2rem; 
   color: #4a2c0b;
   position: absolute;
   text-align: center;
@@ -235,7 +233,7 @@
   letter-spacing: 2px;
   font-family: 'Georgia', serif;
   font-weight: bold;
-  white-space: nowrap; /* Запрещаем перенос текста */
+  white-space: nowrap; 
   text-shadow: 
     2px 2px 0 #e3b778,
     4px 4px 0 #d2a65a,
@@ -253,7 +251,6 @@
     12px 12px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Стили для глобуса */
 .globe-section > *:last-child {
   z-index: 2;
 }

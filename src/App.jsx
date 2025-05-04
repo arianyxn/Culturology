@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import Home from './components/Home/Home.jsx';
 import Peoples from './components/Peoples/Peoples.jsx';
 import PeopleDetail from './components/PeopleDetail/PeopleDetail.jsx';
-import Books from './components/Books/Books.jsx'; // Добавим позже
+import Books from './components/Books/Books.jsx'; 
 import Footer from './components/Footer/Footer.jsx';
 
 function App() {

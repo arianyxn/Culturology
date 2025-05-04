@@ -82,7 +82,6 @@ function Home() {
         </div>
       </div>
       <div className="content-container">
-        {/* Первая секция: изображения слева, текст справа */}
         <div className="description-section">
           <div className="image-slider" onClick={handleNextImage}>
             <div className="image-stack">
@@ -102,7 +101,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Вторая секция: текст слева, изображения справа */}
         <div className="description-section-reversed">
           <div className="description-text-reversed">
             <p>Культуры малых народов — забытые истории, живые традиции</p>
@@ -122,7 +120,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Заголовок перед глобусом, но визуально позади */}
         <div className="globe-section">
           <h2 className="three-d-heading">Каждая культура достойна быть замеченной</h2>
           <Globe />
