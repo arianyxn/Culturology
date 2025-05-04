@@ -7,7 +7,7 @@
 Проект разделён на две части: фронтенд (frontend) и бэкенд (backend).
 # Фронтенд (frontend/)
 
-'''
+```
 frontend/
 ├── node_modules/         # Зависимости npm-пакетов
 ├── public/               # Статические ресурсы
@@ -26,10 +26,10 @@ frontend/
 ├── .env                  # Переменные окружения (например, URL API)
 ├── package.json          # Метаданные проекта и зависимости
 └── README.md             # Документация проекта
-'''
+```
 
 # Бэкенд (backend/)
-'''
+```
 backend/
 ├── culturology/          # Основное Django-приложение
 │   ├── __init__.py
@@ -49,4 +49,4 @@ backend/
 ├── manage.py             # Утилита для управления Django
 ├── requirements.txt      # Зависимости Python
 └── Procfile              # Конфигурация для Render
-'''
+```
